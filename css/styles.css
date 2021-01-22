@@ -277,6 +277,21 @@ header div h1 {
   }
 }
 
+.attribution {
+  color: white;
+}
+
+.attribution p a {
+  color: #8c8c8c;
+  text-decoration: none;
+  margin-top: -5px;
+}
+
+.attribution p a:hover {
+  color: #8c8c8c;
+  text-decoration: underline;
+}
+
 a:hover {
   color: white;
   text-decoration: underline;

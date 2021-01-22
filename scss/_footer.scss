@@ -1,3 +1,18 @@
+.attribution {
+    color: white;
+
+    p a {
+        color:$dark-gray;
+        text-decoration: none;
+        margin-top: -5px;
+    }
+
+    p a:hover {
+        color:$dark-gray;
+        text-decoration: underline;
+    }
+}
+
 a:hover {
     color:white;
     text-decoration: underline;

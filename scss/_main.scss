@@ -1,0 +1,234 @@
+.flex-container {
+    margin: 80px 20px;
+    display: flex;
+    flex-direction: column;
+
+    img{
+        width: 100%;
+        justify-items: center;
+    }
+
+    div {
+        text-align: center;
+        margin-top: 3rem;
+
+        p {
+            margin-top: 1rem;
+            padding: 0px 24px;
+            line-height: 1.6;
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    .flex-container {
+        // flex-direction: row;
+        margin: 9em 10em;
+
+        img{
+            width: 70%;
+        }
+
+        div {
+            text-align: left;
+            background-color: white;
+            padding: 4em 4em;
+
+            width: 36em;
+            margin-top: -20em;
+            margin-left: 34em;
+
+            h2{ 
+                font-size: 40px;
+            }
+
+
+            p {
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+
+.portfolio {
+
+    h2 {
+        text-align: center;
+        margin: 2rem 0 -2rem 0;
+    }
+}
+
+
+.grid-container {
+    margin: 80px 20px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, auto);
+
+}
+
+.grid-item  {
+  
+
+    .grid-img-mobile{
+        width: 100%;
+        opacity: 1;
+        filter: brightness(70%);
+        justify-items: center;
+        transition: .5s ease;
+    }
+
+    .grid-img-desktop {
+        display: none;
+    }
+
+    .grid-img-mobile:hover{
+        opacity: 0.8;
+    }
+
+
+    h3 {
+        color: white;
+        font-size: 24px;
+        width: 140px;
+        text-transform: uppercase;
+        transform: translate(20%, -150%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    
+}
+
+%grid-margin {
+    margin-top: -23px;
+}
+
+%grid-margin-small {
+    margin-top: 0px;
+}
+
+.grid-item-one {
+    @extend %grid-margin
+}
+
+.grid-item-two {
+    @extend %grid-margin
+}
+
+.grid-item-three {
+    @extend %grid-margin
+}
+
+.grid-item-four {
+    @extend %grid-margin
+}
+
+.grid-item-five {
+    @extend %grid-margin-small
+}
+
+.grid-item-six {
+    @extend %grid-margin
+}
+
+.grid-item-seven {
+    @extend %grid-margin
+}
+
+.grid-item-eight {
+    @extend %grid-margin
+}
+
+
+@media (min-width: 768px) {
+
+    .header-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        padding: 0 10em 0 10em; 
+
+        h2 {
+            margin: 0px;
+        }
+    }
+
+    .grid-container {
+        
+
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-column-gap: 1.2em;
+        grid-template-areas: 
+        "grid-item-one grid-item-two grid-item-three grid-item-four"
+        "grid-item-five grid-item-six grid-item-seven grid-item-eight";
+
+        justify-content: space-evenly;
+        padding: 0 8.5em 5em 8.5em; 
+
+        .grid-img-mobile {
+            display: none;
+        }
+
+        .grid-img-desktop {
+            display: block;
+            width: 1fr;
+            opacity: 1;
+            filter: brightness(75%);
+            transition: .5s ease;
+        }
+
+        .grid-item {
+            h3 {
+                color: white;
+                font-size: 26px;
+                width: 120px;
+                text-transform: uppercase;
+                transform: translate(20%, -150%);
+                -ms-transform: translate(-50%, -50%);
+            }
+
+            #bigger-width {
+                width: 140px;
+            }
+
+        }
+
+        .grid-item-one {
+            grid-area: grid-item-one;
+        }
+        .grid-item-two {
+            grid-area: grid-item-two;
+        }
+        .grid-item-three {
+            grid-area: grid-item-three;
+        }
+        .grid-item-four {
+            grid-area: grid-item-four;
+
+        }
+        .grid-item-five {
+            grid-area: grid-item-five;
+            margin-top: -23px;
+
+            h3 {
+                width: $bigger-width;
+                margin-left: -0.8em;
+            }
+        }
+        .grid-item-six {
+            grid-area: grid-item-six;
+        }
+        .grid-item-seven {
+            grid-area: grid-item-seven;
+        }
+        .grid-item-eight {
+            grid-area: grid-item-eight;
+        }
+    }
+}

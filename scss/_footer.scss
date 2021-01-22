@@ -1,0 +1,170 @@
+a:hover {
+    color:white;
+    text-decoration: underline;
+}
+
+.footer-grid {
+    background-color: black;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+
+    justify-content: center;
+    align-content: center;
+
+    padding: 40px;
+
+    .left-col-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+        p {
+            align-self: center;
+            margin: 4px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 500;
+            color: white;
+    
+            margin-bottom: 18px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+
+
+        
+            a {
+                align-self: center;
+        
+                color: white;
+                text-decoration: none;
+                font-family: $p-font-family;
+                margin: 6px;
+        
+                transition: text-decoration 0.5s ease;
+            }
+
+            a:hover {
+                color:white;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .right-col-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+        .social-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            a {
+                margin: 2em 0.6em 0.4em 0.6em;
+            }
+
+        }
+    }
+}
+
+
+
+
+@media (min-width: 768px) {
+
+    .footer-grid {
+        background-color: black;
+        display:grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+    
+        justify-content: space-between;
+        align-content: flex-start;
+    
+        padding: 2.5em 10em 2.5em 10em; 
+    
+        .left-col-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            
+
+        
+    
+            p {
+                align-self: flex-start;
+                margin: 4px;
+            }
+    
+            .logo {
+                font-size: 24px;
+                font-weight: 500;
+                color: white;
+        
+                margin-bottom: 4px;
+            }
+    
+            .links {
+                display: flex;
+                flex-direction: row;
+                align-self: flex-start;
+                font-size: 14px;
+                margin-top: 10px;
+    
+    
+            
+                a {
+                    align-self: flex-start;
+            
+                    color: white;
+                    text-decoration: none;
+                    font-family: $p-font-family;
+                    margin: 0 6px 0 6px;
+            
+                    transition: text-decoration 0.5s ease;
+                }
+
+                a:hover {
+                    color:white;
+                    text-decoration: underline;
+                }
+            }
+        }
+    
+        .right-col-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-content: space-between;
+
+            font-size: 14px;
+
+            p {
+                align-self: flex-end;
+                margin-top: 1em;
+            }
+    
+            .social-icons {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-content: flex-start;
+
+                
+                a {
+                    margin: 0em 0.6em 0em 0.6em;
+                }
+    
+            }
+        }
+    }
+}
